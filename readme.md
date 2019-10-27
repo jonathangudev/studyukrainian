@@ -4,4 +4,4 @@ This repository holds the old version of the Study Ukrainian website abd is no l
 
 ## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+This site is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
