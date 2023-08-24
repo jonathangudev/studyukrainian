@@ -1,11 +1,15 @@
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
 
       <header>
         <!-- Fixed navbar -->
-        <nav class="navbar navbar-expand navbar-light fixed-top bg-white">
+        <nav class="navbar navbar-expand navbar-light fixed-top text-center bg-white">
+          <a class="navbar-brand" href={{ URL::to('') }}>
 
+            <img class="logo 	d-none d-sm-inline" src="/img/logo.png"></img>
+            <span class="d-inline d-sm-none nav-link">Home</span>
+          </a>
             <ul class="navbar-nav navbar-right  ml-auto">
 
               @if (Auth::check())
@@ -26,10 +30,12 @@
                 <a class="nav-link" href= {{ URL::to('about') }} >About</a>
               </li>
 
-              <!-- li class="nav-item">
-                <a class="nav-link btn btn-warning text-light btn-sm" href= {{ URL::to('premium') }} >Premium</a>
-              </li -->
+              <li class="nav-item">
+                <a class="nav-link" href= {{ URL::to('blog') }} >Blog</a>
+              </li>
+
 
             </ul>
+          </div>
         </nav>
       </header>

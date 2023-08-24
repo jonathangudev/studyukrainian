@@ -26,9 +26,13 @@
                 <a class="nav-link" href= {{ URL::to('about') }} >About</a>
               </li>
 
-              <!-- li class="nav-item">
-                <a class="nav-link btn btn-warning text-light btn-sm" href= {{ URL::to('premium') }} >Premium</a>
-              </li -->
+              <li class="nav-item">
+                <a class="nav-link" href= {{ URL::to('blog') }} >Blog</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href= {{ URL::to('premium') }} >Premium</a>
+              </li>
 
             </ul>
         </nav>

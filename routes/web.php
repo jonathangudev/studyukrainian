@@ -40,6 +40,13 @@ Route::get('/grammar', function () {
     return view('grammar_toc');
 });
 
+Route::get('/premium', function () {
+    return view('premium');
+});
+
+Route::get('/premium-1', function () {
+    return view('premium-1');
+});
 
 Route::get('/lessons/{dialogue_number}', function ($dialogue_number) {
     return view('lessons', [
@@ -55,22 +62,25 @@ Route::get('/grammar/{grammar_topic}', function ($grammar_topic) {
 //end static pages
 
 
-//blog stuff, need to separate this out into a blog controller and possibly blog model
-Route::get('/blog/{blog_topic}', function ($blog_topic) {
-  $result = DB::select("select * from blog where title_code = '$blog_topic'", [1]);
 
-  $title_code = ($result[0]->title_code);
-  $time_posted = ($result[0]->time_posted);
-  $title = ($result[0]->title);
-  $body = ($result[0]->body);
 
-  return view('blog',['title_code'=>$title_code,'title'=>$title,'body'=>$body,'time_posted'=>$time_posted]);
+//blog routes
+
+Route::get('/blogs', function () {
+    return view('blog');
 });
 
-Route::get('/blog', function () {
-  $result = DB::table('blog')->get();
-  return view('blog_toc',['result'=>$result]);
-});
+Route::get('/blogs/2018/09/29/how-i-learned-ukrainian', function () {
+    return view('blog.blog1');
+})->name('blog-how-i');;
+
+Route::get('/blogs/2018/09/22/where-to-learn-ukrainian-in-lviv', function () {
+    return view('blog.blog2');
+})->name('blog-where-to');
+
+Route::get('/blogs/2018/09/15/how-to-learn-ukrainian-online', function () {
+    return view('blog.blog3');
+})->name('blog-how-to');
 
 //Contact form stuff, get sends to email controller because an email is sent there
 Route::get('/contact','EmailController@index');

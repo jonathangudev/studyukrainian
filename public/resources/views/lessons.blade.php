@@ -72,12 +72,12 @@
   <?php if ($lesson->dialogue_number >  1) {
     $lesson->buildPreviousDialogueButton();
   } ?>
-  <?php if ($lesson->dialogue_number <  34) {
+  <?php if ($lesson->dialogue_number <  20) {
     $lesson->buildNextDialogueButton();
   } ?>
 
-
 </div>
+
 
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -332,7 +332,7 @@ class Lesson
 
 
     foreach ($words_array as $word) {
-
+      
         if(isset($definitions_array[$word_index])) {
             $definition = $definitions_array[$word_index];
         } else $definition = "";

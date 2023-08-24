@@ -21,7 +21,7 @@
               </div>
 
               <div class="col-12 col-md-6 mt-3 my-md-auto">
-                The Study Ukrainian website was created by a group of volunteers working in Lviv.
+                The Study Ukrainian website was created in 2016 by a group of volunteers working in Lviv.
                 We're dedicated to creating a free online resource for teaching the Ukrainian language.
                 This website is actively being updated with new material.  Keep checking back for updates!
               </div>
